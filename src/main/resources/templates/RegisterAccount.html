@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng kí</title>
+    <link rel="stylesheet" href="./css/RegisterAccount.css">
+</head>
+<body>
+<form class="form_main" action="/RegisterAccount" method="post">
+
+    <span class="heading">Đăng Kí</span><br/>
+
+    <div class="inputcontainer">
+        <label for="username">Username: </label>
+        <input style="font-size: 14px ;margin-left:20px" class="inputfield" id="username" name="username" required /><br/>
+    </div>
+
+    <div style="margin-top: 7px" class="inputcontainer">
+        <label for="password">Password: </label>
+        <input style="margin-left: 27px;font-size: 14px" class="inputfield" id="password" name="password" type="password" required /><br/>
+    </div>
+
+    <div style="margin-top: 7px" class="inputcontainer">
+        <label for="email">Gmail: </label>
+        <input style="margin-left: 50px;font-size: 14px" class="inputfield" id="email" name="email" type="email" required /><br/>
+    </div>
+
+    <div style="margin-top: 7px" class="inputcontainer">
+        <label for="phone">PhoneNumber: </label>
+        <input style="font-size: 14px" class="inputfield" id="phone" name="phone" required /><br/>
+    </div>
+
+    <input type="submit" class="button" value="Đăng kí" />
+
+    <div class="Login">
+        Bạn đã có tài khoản?
+        <a href="/Login">Đăng nhập</a>
+    </div>
+
+</form>
+</body>
+</html>

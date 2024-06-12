@@ -1,0 +1,33 @@
+.infoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 200px;
+}
+
+#sectionInfo.clearfix {
+    margin-top: -10px;
+}
+
+.end-sec {
+    margin-top: 40px;
+    transform: scale(0.83);
+}
+
+.page-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 20px 150px 50px 150px;
+    gap: 10px;
+}
+
+.infoContent {
+    margin-top: 10px;
+}
+
+.titleHotline {
+    font-size: 24px;
+}

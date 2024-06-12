@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HIPSTER SHOP</title>
+    <link rel="stylesheet" href="./css/Home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<div>
+    <!-- Header -->
+    <div class="container">
+        <a href="/Home">
+            <div class="logo">
+                <img src="./images/logo.png" alt="Logo">
+                <h2>HIPSTER SHOP</h2>
+            </div>
+        </a>
+        <div class="Listofcategories">
+            <nav>
+                <ul>
+                    <li><a href="#" class="List-shoe">Giày Nam</a>
+                        <ul class="submenu">
+                            <li><a href="#">
+                                <i class="fa-brands fa-waze"></i>
+                                Sneakers</a>
+                            </li>
+                            <li><a href="#">
+                                <i class="fa-brands fa-waze"></i>
+                                Bốt</a>
+                            </li>
+                            <li><a href="#">
+                                <i class="fa-brands fa-waze"></i>
+                                Giày cao gót</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="List-shoe">Giày Nữ</a>
+                        <ul class="submenu">
+                            <li><a href="#">
+                                <i class="fa-brands fa-waze"></i>
+                                Giày thể thao
+                            </a></li>
+                            <li><a href="#">
+                                <i class="fa-brands fa-waze"></i>
+                                Giày lười</a>
+                            </li>
+                            <li><a href="#">
+                                <i class="fa-brands fa-waze"></i>
+                                Dép</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="List-shoe">Trẻ em</a>
+                        <ul class="submenu">
+                            <li><a href="#">
+                                <i class="fa-brands fa-waze"></i>
+                                a
+                            </a></li>
+                            <li><a href="#">
+                                <i class="fa-brands fa-waze"></i>
+                                b
+                            </a>
+                            </li>
+                            <li><a href="#">
+                                <i class="fa-brands fa-waze"></i>
+                                c
+                            </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="List-shoe">Phụ kiện</a>
+                        <ul class="submenu">
+                            <li><a href="#">
+                                <i class="fa-brands fa-waze"></i>
+                                a
+                            </a></li>
+                            <li><a href="#">
+                                <i class="fa-brands fa-waze"></i>
+                                b
+                            </a>
+                            </li>
+                            <li><a href="#">
+                                <i class="fa-brands fa-waze"></i>
+                                c
+                            </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="List-shoe">Khuyến mãi</a>
+                        <ul class="submenu">
+                            <li><a href="#">
+                                <i class="fa-brands fa-waze"></i>
+                                a
+                            </a></li>
+                            <li><a href="#">
+                                <i class="fa-brands fa-waze"></i>
+                                b
+                            </a>
+                            </li>
+                            <li><a href="#">
+                                <i class="fa-brands fa-waze"></i>
+                                c
+                            </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="/gioithieu" class="List-shoe">Giới thiệu</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Tìm kiếm...">
+            <button type="submit">Tìm kiếm</button>
+        </div>
+        <div class="cart" >
+            <i class="fa-solid fa-cart-shopping"></i>
+            <a href="#">Giỏ hàng</a>
+
+        </div>
+
+<!--        <div class="Login">-->
+<!--            <button > <a href="/Login">Đăng Nhập</a></button>-->
+<!--        </div>-->
+
+        <div class="Login">
+            <!-- Nếu đã đăng nhập, hiển thị tên người dùng thay vì "Đăng Nhập" -->
+            <button th:if="${session.loggedInUserName != null}" th:text="${session.loggedInUserName}"></button>
+            <!-- Nếu chưa đăng nhập, hiển thị nút "Đăng Nhập" -->
+            <button th:unless="${session.loggedInUserName != null}">
+                <a href="/Login">Đăng Nhập</a>
+            </button>
+        </div>
+
+    </div>
+
+    <!-- /Header -->
+
+    <!-- Banner -->
+    <div class="list-slideshow">
+        <div class="slide-show">
+            <div class="list-images">
+                <img src="./images/giay-sneaker-converse-09.jpg" width="100%"  alt="">
+                <img src="./images/giay-converse-da-bong-5.jpg" width="100%" alt="">
+                <img src="./images/0eb4c83d.jpg" width="100%" alt="">
+                <img src="./images/image4.jpg" width="100%"  alt="">
+
+            </div>
+            <div class="btns">
+                <div class="btn-left btn"><i class='bx bx-chevron-left'></i></div>
+                <div class="btn-right btn"><i class='bx bx-chevron-right'></i></div>
+            </div>
+
+        </div>
+        <script src="./js/Slide-show.js"></script>
+    </div>
+
+    <!-- /Banner -->
+
+    <!-- Content -->
+    <div class="content-shoe">
+        <p>Sản phẩm bán chạy</p>
+
+        <ul class="Product">
+            <li>
+                <div class="Product-item">
+                    <div class="Product-top">
+                        <a href="" class="Product-thumb">
+                            <img src="./images/one.jpg" alt="">
+                        </a>
+                        <a href="" class="Buy">Mua ngay</a>
+                    </div>
+                    <div class="Product-infor">
+                        <a href="" class="Product-name">Nike Air Force 1</a>
+                        <div class="Product-price">$1000</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="Product-item" >
+                    <div class="Product-top">
+                        <a href="" class="Product-thumb">
+                            <img src="./images/two.jpg" alt="">
+                        </a>
+                        <a href="" class="Buy">Mua ngay</a>
+                    </div>
+                    <div class="Product-infor">
+                        <a href="" class="Product-name">Nike Air Max 1</a>
+                        <div class="Product-price">$1000</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="Product-item">
+                    <div class="Product-top">
+                        <a href="" class="Product-thumb">
+                            <img src="./images/three.jpg" alt="">
+                        </a>
+                        <a href="" class="Buy">Mua ngay</a>
+                    </div>
+                    <div class="Product-infor">
+                        <a href="" class="Product-name">Nike Air Jordan 1</a>
+                        <div class="Product-price">$1000</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="Product-item">
+                    <div class="Product-top">
+                        <a href="" class="Product-thumb">
+                            <img src="./images/four.jpg" alt="">
+                        </a>
+                        <a href="" class="Buy">Mua ngay</a>
+                    </div>
+                    <div class="Product-infor">
+                        <a href="" class="Product-name"> Nike Air Flight 89</a>
+                        <div class="Product-price">$1000</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="Product-item">
+                    <div class="Product-top">
+                        <a href="" class="Product-thumb">
+                            <img src="./images/five.jpg" alt="">
+                        </a>
+                        <a href="" class="Buy">Mua ngay</a>
+                    </div>
+                    <div class="Product-infor">
+                        <a href="" class="Product-name">Nike Flyknit Racer</a>
+                        <div class="Product-price">$1000</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="Product-item">
+                    <div class="Product-top">
+                        <a href="" class="Product-thumb">
+                            <img src="./images/six.jpg" alt="">
+                        </a>
+                        <a href="" class="Buy">Mua ngay</a>
+                    </div>
+                    <div class="Product-infor">
+                        <a href="" class="Product-name">Nike Air Huarache</a>
+                        <div class="Product-price">$1000</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="Product-item">
+                    <div class="Product-top">
+                        <a href="" class="Product-thumb">
+                            <img src="./images/seven.png" alt="">
+                        </a>
+                        <a href="" class="Buy">Mua ngay</a>
+                    </div>
+                    <div class="Product-infor">
+                        <a href="" class="Product-name"> Nike Air Zoom Generation</a>
+                        <div class="Product-price">$1000</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="Product-item">
+                    <div class="Product-top">
+                        <a href="" class="Product-thumb">
+                            <img src="./images/eight.jpg" alt="">
+                        </a>
+                        <a href="" class="Buy">Mua ngay</a>
+                    </div>
+                    <div class="Product-infor">
+                        <a href="" class="Product-name">Nike Air Mowabb</a>
+                        <div class="Product-price">$1000</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="Product-item">
+                    <div class="Product-top">
+                        <a href="" class="Product-thumb">
+                            <img src="./images/night.jpg" alt="">
+                        </a>
+                        <a href="" class="Buy">Mua ngay</a>
+                    </div>
+                    <div class="Product-infor">
+                        <a href="" class="Product-name">Nike Air More Uptempo
+                        </a>
+                        <div class="Product-price">$1000</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="Product-item">
+                    <div class="Product-top">
+                        <a href="" class="Product-thumb">
+                            <img src="./images/ten.jpg" alt="">
+                        </a>
+                        <a href="" class="Buy">Mua ngay</a>
+                    </div>
+                    <div class="Product-infor">
+                        <a href="" class="Product-name">Nike Cortez OG</a>
+                        <div class="Product-price">$1000</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="Product-item">
+                    <div class="Product-top">
+                        <a href="" class="Product-thumb">
+                            <img src="./images/elevent.jpg" alt="">
+                        </a>
+                        <a href="" class="Buy">Mua ngay</a>
+                    </div>
+                    <div class="Product-infor">
+                        <a href="" class="Product-name">Nike Blazer</a>
+                        <div class="Product-price">$1000</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="Product-item">
+                    <div class="Product-top">
+                        <a href="" class="Product-thumb">
+                            <img src="./images/12.jpg" alt="">
+                        </a>
+                        <a href="" class="Buy">Mua ngay</a>
+                    </div>
+                    <div class="Product-infor">
+                        <a href="" class="Product-name">Nike Air Safari</a>
+                        <div class="Product-price">$1000</div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- /Content -->
+
+    <!-- Footter -->
+    <div class="footter-shoe">
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section about">
+                    <h2>Về Chúng Tôi</h2>
+                    <p>Chúng tôi cung cấp các sản phẩm giày chất lượng cao và dịch vụ tốt nhất.</p>
+                </div>
+                <div class="footer-section links">
+                    <h2>Liên Kết Nhanh</h2>
+                    <ul>
+                        <li><a href="#">Trang Chủ</a></li>
+                        <li><a href="#">Khuyến Mãi</a></li>
+                        <li><a href="#">Liên Hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h2>Liên Hệ</h2>
+                    <p>Địa chỉ: 123 Đường ABC</p>
+                    <p>Điện thoại: 0123 ### ###</p>
+                    <p>Email: hipstershop@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 Website Bán Hàng.
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- /Footter -->
+
+</div>
+</body>
+</html>
